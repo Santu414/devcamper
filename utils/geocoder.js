@@ -1,6 +1,6 @@
 const NodeGeocoder = require("node-geocoder");
-require("dotenv").config({ path: "./config/config.env" });
 
+console.log(process.env.GEOCODER_PROVIDER);
 const options = {
   provider: process.env.GEOCODER_PROVIDER,
   httpAdapter: "https",

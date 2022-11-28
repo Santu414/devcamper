@@ -6,11 +6,10 @@ const connectDB = require("./config/db");
 const logger = require("./middleware/logger");
 const errorHandler = require("./middleware/error");
 
-//Route files
-const bootcamps = require("./routes/bootcamps");
-
 //load env vars
 dotenv.config({ path: "./config/config.env" });
+//Route files
+const bootcamps = require("./routes/bootcamps");
 
 const app = express();
 app.use(express.json());
