@@ -14,7 +14,10 @@ const Course = require("./models/Course");
 // const Review = require("./models/Review");
 
 // Connect to DB
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 // Read JSON files
 const bootcamps = JSON.parse(
