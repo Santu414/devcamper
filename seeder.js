@@ -17,6 +17,7 @@ const Course = require("./models/Course");
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useCreateIndex: true,
 });
 
 // Read JSON files
